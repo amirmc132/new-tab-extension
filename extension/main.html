@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>New Tab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    
+    <!-- ساعت و تاریخ -->
+    <div class="datetime">
+      <div id="time">00:00</div>
+      <div id="date">-- -- ----</div>
+      <div id="day">----</div>
+    </div>
+
+    <!-- بخش اصلی -->
+    <div class="main-content">
+
+      <!-- سرچ بار -->
+      <div class="search-container">
+        <select id="searchEngine">
+          <option value="google" selected>Google</option>
+          <option value="bing">Bing</option>
+          <option value="yahoo">Yahoo</option>
+          <option value="duckduckgo">DuckDuckGo</option>
+        </select>
+        <input type="text" id="search" placeholder="جستجو...">
+        <button id="searchBtn">🔍</button>
+      </div>
+
+      <!-- انتخاب رنگ یا آپلود تصویر -->
+      <div class="bg-options">
+        <span>🎨 پس زمینه: </span>
+        <input type="color" id="colorPicker">
+        <label for="bgFile" class="upload-btn">📁 آپلود تصویر</label>
+        <input type="file" id="bgFile" accept="image/*" style="display:none;">
+      </div>
+
+      <!-- افزودن میانبر -->
+      <div class="add-shortcut">
+        <input type="text" id="siteName" placeholder="نام سایت">
+        <input type="text" id="siteUrl" placeholder="آدرس سایت">
+        <button id="addBtn">➕ اضافه کن</button>
+      </div>
+
+      <!-- میانبرها -->
+      <div class="shortcuts"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

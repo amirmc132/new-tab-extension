@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #6B73FF, #000DFF);
+  color: white;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+
+/* ساعت و تاریخ */
+.datetime {
+  width: 200px;
+  padding: 20px;
+  border-right: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.2);
+}
+
+#time { font-size: 36px; margin-bottom: 10px; }
+#date, #day { font-size: 18px; }
+
+/* بخش اصلی */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* سرچ بار */
+.search-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+select, input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+input[type="text"] { width: 250px; }
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  background: #FFB74D;
+  color: black;
+  cursor: pointer;
+}
+
+button:hover { background: #FFA726; }
+
+/* پس زمینه */
+.bg-options {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#colorPicker { width: 40px; height: 30px; padding: 0; border: none; cursor: pointer; }
+.upload-btn {
+  padding: 6px 10px;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.upload-btn:hover { background: rgba(255,255,255,0.4); }
+
+/* افزودن میانبر */
+.add-shortcut {
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.add-shortcut input {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.shortcuts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.shortcuts .shortcut {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  width: 80px;
+}
+
+.shortcuts .shortcut img {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 5px;
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  .container { flex-direction: column; }
+  .datetime { width: 100%; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.2); flex-direction: row; justify-content: space-around; padding: 10px; }
+  .main-content { padding: 15px; }
+  input[type="text"] { width: 100%; }
+}
+.shortcuts .shortcut {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  width: 80px;
+  padding: 5px;
+  border: 2px solid rgba(255,255,255,0.5); /* این border اولیه */
+  border-radius: 12px;
+  transition: border-color 0.3s;
+}
