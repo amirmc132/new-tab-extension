@@ -28,17 +28,17 @@ const searchUrls = {
   duckduckgo: "https://duckduckgo.com/?q="
 };
 
-function isValidUrl(string) {
+/*function isValidUrl(string) {
   try { new URL(string); return true; } catch (_) { return false; }
-}
+}*/
 
 function search() {
   const query = searchInput.value.trim();
   const engine = select.value;
   if (!query || !engine) { alert("لطفاً موتور جستجو و عبارت را وارد کنید!"); return; }
 
-  let urlToCheck = query.startsWith("http") ? query : "http://" + query;
-  if (isValidUrl(urlToCheck)) { window.location.href = urlToCheck; return; }
+  /*let urlToCheck = query.startsWith("http") ? query : "http://" + query;
+  if (isValidUrl(urlToCheck)) { window.location.href = urlToCheck; return; }*/
 
   window.location.href = searchUrls[engine] + encodeURIComponent(query);
 }
